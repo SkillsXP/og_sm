@@ -17,4 +17,11 @@ public Movable(int X, int Y, int h, int w){
 	public void draw(Graphics g) {
 		
 	}
+	
+	public int get X(){
+		
+	}
+	public int get X(){
+		
+	}
 }
