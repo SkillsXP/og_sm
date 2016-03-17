@@ -1,7 +1,4 @@
 
-public class MainCharacter {
+public class MainCharacter extends Movable{
 
-	
-	
-	
 }
