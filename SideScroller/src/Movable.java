@@ -19,9 +19,18 @@ public Movable(int X, int Y, int h, int w){
 	}
 	
 	public int get X(){
+		return 
+	}
+	
+	public int get Y(){
 		
 	}
-	public int get X(){
+	
+	public int get height(){
+		
+	}
+	
+	public int get width(){
 		
 	}
 }
