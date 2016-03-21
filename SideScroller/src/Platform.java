@@ -25,18 +25,18 @@ public abstract class Platform {
 		isHit = false;
 	}
 	
-	public void reverb(int dir, Graphics g){
+	public void reverb(int dir, int magnitude, Graphics g){
 		if (dir == 0){
-			mp.bup(g, 10);
+			mp.bup(g, magnitude);
 		}
 		else if (dir == 1){
-			mp.bright(g, 10);
+			mp.bright(g, magnitude);
 		}
 		else if (dir == 2){
-			mp.bdown(g, 10);
+			mp.bdown(g, magnitude);
 		}
 		else {
-			mp.bleft(g, 10);
+			mp.bleft(g, magnitude);
 		}
 	}
 	
