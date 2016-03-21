@@ -4,13 +4,13 @@ import java.awt.Graphics;
 //we can make specific platforms like bricks, floating ground and stick (etc...) by extending this thing
 public abstract class Platform {
 	MarioPanel mp;
-	private int lx, ly, sx, sy;
+	private int locx, locy, width, height;
 	
 	public Platform(int locx, int locy, int six, int siy, MarioPanel input){
-		lx = locx;
-		ly = locy;
-		sx = six;
-		sy = siy;
+		locx = locx;
+		locy = locy;
+		width = six;
+		height = siy;
 		mp = input;
 	}
 	
