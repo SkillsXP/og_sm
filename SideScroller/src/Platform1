@@ -1,0 +1,7 @@
+//this is the brick
+public class Platform1 extends Platform{
+  public Platform1(){
+  //constructor
+  
+  }
+}
