@@ -6,11 +6,12 @@ public abstract class Platform {
 	MarioPanel mp;
 	private int lx, ly, sx, sy;
 	
-	public Platform(int locx, int locy, int six, int siy){
+	public Platform(int locx, int locy, int six, int siy, MarioPanel input){
 		lx = locx;
 		ly = locy;
 		sx = six;
 		sy = siy;
+		mp = input;
 	}
 	
 	public abstract void draw(Graphics g); 
