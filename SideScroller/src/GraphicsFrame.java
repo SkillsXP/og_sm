@@ -1,6 +1,6 @@
 import javax.swing.JFrame;
 
-
+// the launcher
 public class GraphicsFrame extends JFrame {
 
 	public static void main(String[] args) {
