@@ -1,8 +1,8 @@
-public class Enemy1 extends Enemy{
+public class Goomba extends Enemy{
   
   private int lives = 1;
   private boolean hit;
-  public Enemy1(int X, int Y, int h, int w, Image i){
+  public Goomba(int X, int Y, int h, int w, Image i){
     super(X, Y, h, w, i);
   }
   
