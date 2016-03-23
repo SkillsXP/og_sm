@@ -1,16 +1,19 @@
 import javax.swing.JFrame;
 
-// the launcher
+
 public class GraphicsFrame extends JFrame {
 
+	MarioPanel masterMario = null;
+	
 	public static void main(String[] args) {
 		new GraphicsFrame();
 	}
 	
 	public GraphicsFrame() {
-		super("Mario!!");
+		super("Mario Maker");
 		this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
-		this.add(new MarioPanel());
+		masterMario = new MarioPanel();
+		this.add(masterMario);
 		this.pack();
 		this.setVisible(true);
 	}
