@@ -142,7 +142,9 @@ public class MarioPanel extends JPanel {
 		
 	}
 
-	
+	public void moveGoomba(Graphics g){
+		g.drawRect()
+	}
 }
 
 	
