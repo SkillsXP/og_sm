@@ -3,7 +3,7 @@ public class GameObjects{
   int x, y, height, width;
   Image image;
   
-  public(int X, int Y, int w, int h, Image i){
+  public GameObjects(int X, int Y, int w, int h, Image i){
       x = X;
       y = Y;
       width = w;
@@ -15,19 +15,19 @@ public class GameObjects{
     
   }
   
-  	public int get X(){
+  	public int getX(){
 		return x;
 	}
 	
-	public int get Y(){
+	public int getY(){
 		return y;
 	}
 	
-	public int get height(){
+	public int getheight(){
 		return height;
 	}
 	
-	public int get width(){
+	public int getwidth(){
 		return width;
 	}
 	
