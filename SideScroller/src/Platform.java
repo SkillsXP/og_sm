@@ -16,6 +16,7 @@ public abstract class Platform {
 	}
 	
 	public abstract void draw(Graphics g); 
+	public abstract void breaks();
 	
 	public void gotHit(){
 		isHit = true;
