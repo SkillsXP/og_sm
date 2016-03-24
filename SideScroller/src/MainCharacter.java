@@ -1,7 +1,10 @@
+import java.awt.Rectangle;
+
 
 public class MainCharacter extends Moveable{
 	int x, y, sx, sy;
 	int lives = 1;
+	Rectangle rmario;
 	
 	public MainCharacter(int x, int y, int sx, int sy){
 		//knows its own location and size 
@@ -51,5 +54,9 @@ public class MainCharacter extends Moveable{
 
 	public void setLives(int lives) {
 		this.lives = lives;
+	}
+	
+	public Rectangle getRmario() {
+		return rmario;
 	}
 }
