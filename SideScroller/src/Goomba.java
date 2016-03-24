@@ -32,5 +32,10 @@ public class Goomba extends Enemy{
 			}
 		}
 		counter++;
-  } 
+  }
+  
+  public boolean collidesWith(){
+  	return true; // Will change later.
+  }
+  
 }
