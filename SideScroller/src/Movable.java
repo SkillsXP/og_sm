@@ -57,5 +57,10 @@ public class Movable{
 	public void setImage(Image i){
 	  image = i;
 	}
+	
+	public boolean collidesWith(){
+	  return true;
+  	}
+	
 }
     
