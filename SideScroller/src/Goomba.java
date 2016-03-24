@@ -1,3 +1,5 @@
+import java.awt.Image;
+
 public class Goomba extends Enemy{
   
   private int lives = 1;
@@ -7,7 +9,7 @@ public class Goomba extends Enemy{
   }
   
   public void isHit(MainCharacter m){
-    if(m.getX() <= this.getX() + this.getWidth() && this.getX() <= m.getX() + m.getWidth() && this.getY() + this.getWidth() + 1 = m.getY()){
+    if(m.getX() <= this.getX() + this.getWidth() && this.getX() <= m.getX() + m.getWidth() && this.getY() + this.getWidth() + 1 <= m.getY()){
       hit = true;
     }
     // check for more stuff such as fireballs here (later)
@@ -15,8 +17,20 @@ public class Goomba extends Enemy{
   
   public void despawn(){
     if(hit == true){
-      // finish after figuring things out
+      setY(10000); 
     }
   }
   
-  
+  public void move(){
+	  int counter = 0;
+		while(collidesWith() == false){
+			if(counter%2 == 0){
+				setX(getX() - 10);
+			}
+			else{
+				setX(getX() + 10);
+			}
+		}
+		counter++;
+  } 
+}
