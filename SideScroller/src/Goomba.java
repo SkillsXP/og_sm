@@ -35,7 +35,10 @@ public class Goomba extends Enemy{
   }
   
   public boolean collidesWithPlatform(Platform p){
-  	if(this.getY() - this.getHeight() > p.getY())
+  	if(this.getY() + this.getHeight() > p.getY()) && (p.getX() <= this.getX() + this.getWidth() || this.getX() <= p.getX() + p.getWidth())){
+  		return true;	
+  	}
+  	return false;
   }
   
 }
