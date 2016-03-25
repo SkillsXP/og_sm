@@ -23,7 +23,7 @@ public class Goomba extends Enemy{
   
   public void move(){
 	  int counter = 0;
-		while(collidesWith() == false){
+		while(collidesWithPlatform() == false){
 			if(counter%2 == 0){
 				setX(getX() - 10);
 			}
