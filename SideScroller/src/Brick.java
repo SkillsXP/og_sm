@@ -1,4 +1,4 @@
-import java.awt.Graphics;
+iimport java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,10 +21,12 @@ public abstract class Brick extends Platform{
 	}
 
 	@Override
-	public void breaks() {
+	public boolean breaks() {
 		//breaks the break if Mario is in certain height and it hits it
 		if ((mario.height == 150) && (brick.intersects(mario.getRmario()))){
-			
+			return true;
+		} else{
+			return false;
 		}
 	}
 	
