@@ -56,7 +56,7 @@ public class MainCharacter extends Moveable{
 		this.lives = lives;
 	}
 	
-	public Rectangle getRmario() {
+	public Rectangle getRectMario() {
 		return rmario;
 	}
 	
@@ -78,7 +78,7 @@ public class MainCharacter extends Moveable{
 		//changes to right-facing image
 	}
 	
-	public void Jump(){
+	public void jump(){
 		
 	}
 	
