@@ -6,6 +6,7 @@ public abstract class Platform {
 	MarioPanel mp;
 	private int locx, locy, width, height;
 	private boolean isHit = false;
+	public static List<Platform> p = new List<Platform>();
 	
 	public Platform(int locx, int locy, int six, int siy, MarioPanel input){
 		locx = locx;
@@ -13,6 +14,7 @@ public abstract class Platform {
 		width = six;
 		height = siy;
 		mp = input;
+		p.add(this);
 	}
 	
 	public abstract void draw(Graphics g); 
