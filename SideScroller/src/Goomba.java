@@ -34,11 +34,13 @@ public class Goomba extends Enemy{
 		counter++;
   }
   
-  public boolean collidesWithPlatform(Platform p){
-  	if(this.getY() + this.getHeight() > p.getY()) && (p.getX() <= this.getX() + this.getWidth() || this.getX() <= p.getX() + p.getWidth())){
-  		return true;	
+  public boolean collidesWithPlatform(){
+  	for(int i = 0; i < p.size(); i++){
+  		if(this.getY() + this.getHeight() > p.get(i).getY() && (p.get(i).getX() <= this.getX() + this.getWidth() || this.getX() <= p.get(i).getX() + p.get(i).getWidth())){
+  			return true;	
+  		}
+  		return false;
   	}
-  	return false;
   }
   
 }
