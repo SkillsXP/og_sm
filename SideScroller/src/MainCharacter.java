@@ -59,4 +59,29 @@ public class MainCharacter extends Moveable{
 	public Rectangle getRmario() {
 		return rmario;
 	}
+	
+	public void moveRight{
+		turnRight();
+		x+=10;
+	}
+	
+	public void moveLeft{
+		turnLeft();
+		x-=10;
+	}
+	
+	public void turnRight(){
+		//changes to right-facing image
+	}
+	
+	public void turnLeft(){
+		//changes to right-facing image
+	}
+	
+	public void Jump(){
+		
+	}
+	
+	
+	
 }
