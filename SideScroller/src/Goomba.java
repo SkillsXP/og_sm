@@ -9,7 +9,7 @@ public class Goomba extends Enemy{
   }
   
   public void isHit(MainCharacter m){
-    if(m.getX() <= this.getX() + this.getWidth() && this.getX() <= m.getX() + m.getWidth() && this.getY() + this.getWidth() + 1 <= m.getY()){
+    if(m.getX() <= this.getX() + this.getWidth() && this.getX() <= m.getX() + m.getWidth() && this.getY() - 1 >= m.getY() + m.getHeight()){
       hit = true;
     }
     // check for more stuff such as fireballs here (later)
@@ -34,8 +34,8 @@ public class Goomba extends Enemy{
 		counter++;
   }
   
-  public boolean collidesWith(){
-  	return true; // Will change later.
+  public boolean collidesWithPlatform(Platform p){
+  	if(this.getY() - this.getHeight() > p.getY())
   }
   
 }
