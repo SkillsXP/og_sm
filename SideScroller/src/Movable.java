@@ -59,7 +59,7 @@ public class Movable{
 	}
 	
 	public boolean collidesWith(){
-	  return true;
+	  return true; //change
   	}
 	
 }
