@@ -115,9 +115,12 @@ public class MarioPanel extends JPanel {
 		//x+=step*this.compassHeading;
 		
 		//BufferedImage rightView = bkgrnd.getSubimage(x	, 0	, this.getWidth(), this.bkgrnd.getHeight());
+			if (world.getMario().getX() == (this.WIDTH - 200)){
+				g.drawImage(this.djtverbg, this.WIDTH+1 ,0,this.getWidth(), this.getHeight(),null);
+			}else{
 		g.drawImage(this.djtverbg, 0,0,this.getWidth(), this.getHeight(),null);
+			}
 	}
-
 		public void bup(Graphics g, int ushift) {
 		//Bounces something up, then returns it to its original position
 		//int is used to measure size of the shift
@@ -142,11 +145,8 @@ public class MarioPanel extends JPanel {
 		
 	}
 
-	public void moveGoomba(Graphics g){
-		g.drawRect()
-	}
+	
 }
 
 	
-}
 
