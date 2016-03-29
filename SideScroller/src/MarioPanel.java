@@ -40,6 +40,7 @@ public class MarioPanel extends JPanel {
 	private MarioWorld world;
 	private BufferedImage djtverbg;
 	private int bg_W ;
+	private List<Platform> platforms = new ArrayList<Platform>();
 	
 	public MarioPanel() {
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));// Otherwise, the frame starts off small
