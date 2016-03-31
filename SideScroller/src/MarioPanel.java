@@ -1,4 +1,3 @@
-// Some changes made here
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -31,7 +30,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
-
 public class MarioPanel extends JPanel {
 
 	final int WIDTH = 3000, HEIGHT = 1500;// starting values for width and height in pixels
@@ -40,7 +38,7 @@ public class MarioPanel extends JPanel {
 	private MarioWorld world;
 	private BufferedImage djtverbg;
 	private int bg_W ;
-	private List<Platform> platforms = new ArrayList<Platform>();
+	private MainCharacter pmario = new MainCharacter(0, 100, 150, 77);;
 	
 	public MarioPanel() {
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));// Otherwise, the frame starts off small
@@ -51,7 +49,6 @@ public class MarioPanel extends JPanel {
 
 	private void setUpBackground() {
 		URL url = getClass().getResource("Images/djtverbg.jpg");
-		
 		try {
 			this.djtverbg=(BufferedImage) ImageIO.read(url);
 		} catch (IOException e) {
@@ -116,7 +113,7 @@ public class MarioPanel extends JPanel {
 		//x+=step*this.compassHeading;
 		
 		//BufferedImage rightView = bkgrnd.getSubimage(x	, 0	, this.getWidth(), this.bkgrnd.getHeight());
-			if (world.getMario().getX() == (this.WIDTH - 200)){
+			if (pmario.getX() == (this.WIDTH - 200)){
 				g.drawImage(this.djtverbg, this.WIDTH+1 ,0,this.getWidth(), this.getHeight(),null);
 			}else{
 		g.drawImage(this.djtverbg, 0,0,this.getWidth(), this.getHeight(),null);
