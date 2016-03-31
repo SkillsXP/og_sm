@@ -1,10 +1,16 @@
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Rectangle;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 
 public class MainCharacter extends Moveable{
-	int x, y, sx, sy;
-	int lives = 1;
-	Rectangle rmario;
+	private int x, y, sx, sy;
+	private int lives = 3;
+	private Rectangle rmario;
+	Image ebitmario;
 	
 	public MainCharacter(int x, int y, int sx, int sy){
 		//knows its own location and size 
@@ -14,7 +20,20 @@ public class MainCharacter extends Moveable{
 		this.y = y;
 		this.sx = sx;
 		this.sy = sy;
+		//image construct
+		try {
+			ebitmario = ImageIO.read(MarioWorld.class.getResourceAsStream("Images/StatMario.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		}
+	
+	public void draw (Graphics g){
+		g.drawRect(this.getX(), this.getY(), this.getSx(), this.getSy());
+		g.drawImage(ebitmario, sx, sy, null);
+	}
+	
 	//getters&setters
 	public int getX() {
 		return x;
@@ -56,32 +75,7 @@ public class MainCharacter extends Moveable{
 		this.lives = lives;
 	}
 	
-	public Rectangle getRectMario() {
+	public Rectangle getRmario() {
 		return rmario;
 	}
-	
-	public void moveRight{
-		turnRight();
-		x+=10;
-	}
-	
-	public void moveLeft{
-		turnLeft();
-		x-=10;
-	}
-	
-	public void turnRight(){
-		//changes to right-facing image
-	}
-	
-	public void turnLeft(){
-		//changes to right-facing image
-	}
-	
-	public void jump(){
-		
-	}
-	
-	
-	
 }
