@@ -3,6 +3,11 @@ import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.image.ImageObserver;
 import java.io.IOException;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.image.ImageObserver;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,7 +35,7 @@ public class MarioWorld {
 	
 	public void draw(Graphics g) {
 		//draw new background when main character reaches the boundary
-		mario = new MainCharacter(0, 100, 150, 77);
+		mario = new MainCharacter((panel.WIDTH / 2), 100, 150, (panel.HEIGHT - 350));
 		mario.draw(g);
 	}
 
